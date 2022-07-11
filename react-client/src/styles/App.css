@@ -1,0 +1,22 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #231123;
+}
+
+.userClass {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  /* flex-flow: column wrap; */
+  gap: 10px 20px; /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  padding: 8px;
+  margin: 8px;
+}

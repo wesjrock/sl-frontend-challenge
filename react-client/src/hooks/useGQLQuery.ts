@@ -1,5 +1,6 @@
+// Custom hook to demonstrate using React-Query
 import { useQuery } from "react-query";
-import { GraphQLClient, request } from "graphql-request";
+import { request } from "graphql-request";
 
 export const useGQLQuery = (
   key: any,
