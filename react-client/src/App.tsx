@@ -15,7 +15,6 @@ const GET_USERS = gql`
 `;
 
 const App = () => {
-  // Fetch data from custom hook that uses React-Query
   const { data, isLoading, error } = useGQLQuery("users", GET_USERS);
   console.log(data);
 
@@ -23,7 +22,7 @@ const App = () => {
     return <div>Loading ...</div>;
   }
   if (error) {
-    return <div>Something went wrong</div>;
+    return <div>An error has occurred: {error}</div>;
   }
 
   return (
