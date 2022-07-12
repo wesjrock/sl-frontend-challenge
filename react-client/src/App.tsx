@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/App.css";
 
+// Material-UI
 import {
   Avatar,
   List,
@@ -10,26 +11,31 @@ import {
   Typography,
 } from "@mui/material";
 
+// Custom Hooks
 import { useGQLQuery } from "./hooks/useGQLQuery";
+
+// Interfaces
 import UserProps from "./interfaces/UserProps";
+
+// Queries
 import GET_USERS_REACT_QUERY from "./queries/usersReactQuery";
 import GET_USERS_RELAY_QUERY from "./queries/usersRelayQuery";
 
+// Relay
 import RelayEnvironment from "./relay/RelayEnvironment";
 import {
   RelayEnvironmentProvider,
   loadQuery,
   usePreloadedQuery,
 } from "react-relay/hooks";
-
-import type { usersRelayQuery } from "./queries/__generated__/usersRelayQuery.graphql";
 import type { PreloadedQuery } from "react-relay";
-
-const { Suspense } = React;
+import type { usersRelayQuery } from "./queries/__generated__/usersRelayQuery.graphql";
 
 export type Props = {
   preloadedQuery: PreloadedQuery<usersRelayQuery>;
 };
+
+const { Suspense } = React;
 
 const preloadedQuery = loadQuery(RelayEnvironment, GET_USERS_RELAY_QUERY, {
   /* query variables */

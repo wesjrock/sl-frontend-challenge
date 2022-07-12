@@ -1,7 +1,9 @@
-# Sigalei Code Challenges
+# React/GraphQL Code Challenge
 
-# Installing and Running
+# Running the application
 ```
+After cloning the project:
+
 $ cd graphql-server
 $ yarn install
 $ yarn start
@@ -9,4 +11,10 @@ $ yarn start
 $ cd react-client
 $ yarn install
 $ yarn start
+```
+
+# Testing
+```
+$ cd react-client
+$ yarn test
 ```
