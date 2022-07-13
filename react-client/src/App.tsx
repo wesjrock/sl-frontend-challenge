@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/App.css";
+import "styles/App.css";
 
 // Material-UI
 import {
@@ -11,29 +11,24 @@ import {
   Typography,
 } from "@mui/material";
 
-// Custom Hooks
-import { useGQLQuery } from "./hooks/useGQLQuery";
-
-// Interfaces
-import UserProps from "./interfaces/UserProps";
-
-// Queries
-import GET_USERS_REACT_QUERY from "./queries/usersReactQuery";
-import GET_USERS_RELAY_QUERY from "./queries/usersRelayQuery";
+// React-Query
+import { useGQLQuery } from "hooks/useGQLQuery";
+import GET_USERS_REACT_QUERY from "queries/usersReactQuery";
 
 // Relay
-import RelayEnvironment from "./relay/RelayEnvironment";
+import RelayEnvironment from "relay/RelayEnvironment";
+import GET_USERS_RELAY_QUERY from "queries/usersRelayQuery";
 import {
   RelayEnvironmentProvider,
   loadQuery,
   usePreloadedQuery,
 } from "react-relay/hooks";
-import type { PreloadedQuery } from "react-relay";
-import type { usersRelayQuery } from "./queries/__generated__/usersRelayQuery.graphql";
 
-export type Props = {
-  preloadedQuery: PreloadedQuery<usersRelayQuery>;
-};
+// Interfaces
+import UserProps from "interfaces/UserProps";
+
+// Types
+import Props from "types/Props";
 
 const { Suspense } = React;
 

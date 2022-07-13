@@ -1,4 +1,3 @@
-// Custom hook to demonstrate using React-Query
 import { useQuery } from "react-query";
 import { request } from "graphql-request";
 
