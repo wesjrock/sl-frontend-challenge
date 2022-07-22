@@ -1,3 +1,4 @@
+// usersRelayQuery Repository
 import graphql from "babel-plugin-relay/macro";
 
 const GET_USERS_RELAY_QUERY = graphql`

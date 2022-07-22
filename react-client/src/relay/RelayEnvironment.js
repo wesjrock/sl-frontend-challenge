@@ -1,3 +1,4 @@
+// Tell Relay how to connect to our GraphQL server
 import { Environment, Network, RecordSource, Store } from "relay-runtime";
 import fetchGraphQL from "./fetchGraphQL";
 
